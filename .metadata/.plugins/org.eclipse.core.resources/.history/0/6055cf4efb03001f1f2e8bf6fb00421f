@@ -1,0 +1,56 @@
+package com.TaskDemo.Repository;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.TaskDemo.Entity.Task;
+import com.TaskDemo.serviceImpl.RowMapperImpl;
+
+@Repository
+public class TaskRepository {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	public Task findById(Long id) {
+		String sql = "SELECT * FROM tasks WHERE id = ?";
+		RowMapper<Task> mapper = new RowMapperImpl();
+		Task currTask;
+		try {
+			currTask = jdbcTemplate.queryForObject(sql, mapper,id);	
+		}catch(Exception ex) {
+			return null;
+		}
+		return currTask;		
+	}
+	
+	public List<Task> findAllTasks(){
+		String sql= "SELECT * FROM tasks";
+		List<Task> totalTasks = jdbcTemplate.query(sql, new RowMapperImpl());
+		return totalTasks;
+	}
+	
+	public void save(Task task) {
+        Long id = (long) jdbcTemplate.update("INSERT INTO tasks(taskName, taskDescription, taskStatus, dateSubmit, priority) VALUES (?, ?, ?, ?, ?)",
+                task.getTaskName(), task.getTaskDescription(), task.getStatus(), task.getDateSubmit(), task.getPriority());
+        task.setId(id);
+    }
+
+    public boolean update(Task task) {
+       int rowsUpdate =  jdbcTemplate.update("UPDATE tasks SET taskName=?, taskDescription=?, taskStatus=?, dateSubmit=?, priority=? WHERE id=?",
+                task.getTaskName(), task.getTaskDescription(), task.getStatus(), task.getDateSubmit(), task.getPriority(), task.getId());
+       return rowsUpdate>0;
+    }
+
+    public boolean deleteById(Long id) {
+        int rowsUpdate =  jdbcTemplate.update("DELETE FROM tasks WHERE id=?", id);
+        return rowsUpdate > 0;
+    }
+
+}

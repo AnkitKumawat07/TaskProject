@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskRepositoryTests" project="Task" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskRepositoryTests" time="2.006" displayname="TaskRepositoryTests" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]">
+    <testcase name="testCreateUser" classname="com.TaskDemo.Task.TaskRepositoryTests" time="2.006" displayname="testCreateUser()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testCreateUser()]">
+      <failure>java.lang.AssertionError: 
+Expecting actual not to be null
+	at com.TaskDemo.Task.TaskRepositoryTests.testCreateUser(TaskRepositoryTests.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

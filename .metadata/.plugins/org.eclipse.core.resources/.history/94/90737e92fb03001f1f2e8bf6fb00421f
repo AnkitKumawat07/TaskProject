@@ -1,0 +1,83 @@
+package com.TaskDemo.Repository;
+
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Repository;
+
+import com.TaskDemo.Entity.Task;
+import com.TaskDemo.serviceImpl.RowMapperImpl;
+
+@Repository
+public class TaskRepository {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	public Task findById(Long id) {
+		String sql = "SELECT * FROM tasks WHERE id = ?";
+		RowMapper<Task> mapper = new RowMapperImpl();
+		Task currTask;
+		try {
+			currTask = jdbcTemplate.queryForObject(sql, mapper,id);	
+		}catch(Exception ex) {
+			return null;
+		}
+		return currTask;		
+	}
+	
+	public List<Task> findAllTasks(){
+		String sql= "SELECT * FROM tasks";
+		List<Task> totalTasks = jdbcTemplate.query(sql, new RowMapperImpl());
+		return totalTasks;
+	}
+	
+	public Long save(Task task) {
+		String sql = "INSERT INTO tasks(taskName, taskDescription, taskStatus, dateSubmit, priority) VALUES (?, ?, ?, ?, ?)";
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		jdbcTemplate.update(new PreparedStatementCreator() {
+	        @Override
+	        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
+	            // Create a PreparedStatement with the SQL query and specify the generated key column names
+	            PreparedStatement ps = connection.prepareStatement(sql, new String[]{"id"}); // Specify the column names for generated keys
+
+	            // Set the parameters for the PreparedStatement
+	            ps.setString(1, task.getTaskName()); // Set the value for the first parameter placeholder (?)
+	            ps.setString(2, task.getTaskDescription());    // Set the value for the second parameter placeholder (?)
+	            ps.setShort(3, task.getStatus());  
+	            ps.setDate(4, (Date) task.getDateSubmit());
+	            ps.setShort(5, task.getPriority());
+	            // Return the configured PreparedStatement
+	            return ps;
+	        }
+	    }, keyHolder);
+//        Long id = (long) jdbcTemplate.update("INSERT INTO tasks(taskName, taskDescription, taskStatus, dateSubmit, priority) VALUES (?, ?, ?, ?, ?)",
+//                task.getTaskName(), task.getTaskDescription(), task.getStatus(), task.getDateSubmit(), task.getPriority());
+//        task.setId(id);
+		System.out.println("Key  --" , keyHolder.getKey().longValue())
+		return keyHolder.getKey().longValue();
+    }
+
+    public boolean update(Task task) {
+       int rowsUpdate =  jdbcTemplate.update("UPDATE tasks SET taskName=?, taskDescription=?, taskStatus=?, dateSubmit=?, priority=? WHERE id=?",
+                task.getTaskName(), task.getTaskDescription(), task.getStatus(), task.getDateSubmit(), task.getPriority(), task.getId());
+       return rowsUpdate>0;
+    }
+
+    public boolean deleteById(Long id) {
+        int rowsUpdate =  jdbcTemplate.update("DELETE FROM tasks WHERE id=?", id);
+        return rowsUpdate > 0;
+    }
+
+}

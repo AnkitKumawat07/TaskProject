@@ -1,0 +1,5 @@
+package com.TaskDemo.service;
+
+public interface taskService {
+
+}

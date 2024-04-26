@@ -1,0 +1,33 @@
+package com.TaskDemo.Repository;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
+
+import com.TaskDemo.Entity.Task;
+import com.TaskDemo.serviceImpl.RowMapperImpl;
+
+@Repository
+public class TaskRepository {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	public Task findById(Long id) {
+		String sql = "SELECT * FROM tasks WHERE id = ?";
+		RowMapper<Task> mapper = new RowMapperImpl();
+		Task currTask = jdbcTemplate.queryForObject(sql, mapper,id);		
+		return currTask;		
+	}
+	
+	public List<Task> findAllTasks(){
+		String sql= "SELECT * FROM tasks";
+		List<Task> totalTasks = jdbcTemplate.query(sql, new RowMapperImpl());
+		return totalTasks;
+	}
+}

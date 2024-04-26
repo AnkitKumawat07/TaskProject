@@ -1,0 +1,47 @@
+package com.TaskDemo.Task;
+
+import static org.mockito.Mockito.when;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+import com.TaskDemo.Entity.Task;
+
+import com.TaskDemo.controller.TaskController;
+import com.TaskDemo.service.taskService;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@ExtendWith(MockitoExtension.class)
+public class TaskApiTests {
+	
+	@Autowired 
+	private MockMvc mockMvc;
+    
+	@Autowired 
+    private ObjectMapper objectMapper;
+	
+	@MockBean 
+	private taskService taskservice;
+
+	
+	
+	
+	private static final String END_POINT_URL = "/tasks";
+	
+	
+	
+	
+	
+	
+	
+}

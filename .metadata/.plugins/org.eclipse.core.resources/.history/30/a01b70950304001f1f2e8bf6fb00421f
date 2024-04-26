@@ -1,0 +1,37 @@
+package com.TaskDemo.Task;
+
+import static org.mockito.Mockito.when;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.TaskDemo.Entity.Task;
+import com.TaskDemo.controller.TaskController;
+import com.TaskDemo.service.taskService;
+
+@SpringBootTest'
+@RunWith(MockitoJUnitRunner.class)
+public class TaskApiTests {
+	
+	@Mock
+	private taskService taskservice;
+	
+	@InjectMocks
+	private TaskController taskController;
+
+	@Test
+	public void testCreateUser() {
+		Task newTask = new Task();
+		newTask.setTaskName("Task API Test");
+		newTask.setTaskDescription("Test API Testing Working");
+		newTask.setDateSubmit(new Date());
+		newTask.setPriority((short) 1);
+		when (taskservice.createTask(newTask))
+		
+	}
+}

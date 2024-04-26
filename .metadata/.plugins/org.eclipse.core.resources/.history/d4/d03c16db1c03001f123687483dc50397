@@ -1,0 +1,5 @@
+package com.TaskDemo.Entity;
+
+public class Task {
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskApiTests" project="Task" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskApiTests" time="1.322" displayname="TaskApiTests" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskApiTests]">
+    <testcase name="getTaskByIdTest" classname="com.TaskDemo.Task.TaskApiTests" time="1.322" displayname="getTaskByIdTest()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskApiTests]/[method:getTaskByIdTest()]">
+      <error>org.mockito.exceptions.base.MockitoException: 
+Cannot instantiate @InjectMocks field named 'taskservice'! Cause: the type 'taskService' is an interface.
+You haven't provided the instance at field declaration so I tried to construct the instance.
+Examples of correct usage of @InjectMocks:
+   @InjectMocks Service service = new Service();
+   @InjectMocks Service service;
+   //and... don't forget about some @Mocks for injection :)
+
+	at org.mockito.junit.jupiter.MockitoExtension.beforeEach(MockitoExtension.java:159)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.util.Set.forEach(java.util.function.Consumer)" because the return value of "org.junit.jupiter.api.extension.ExtensionContext$Store.remove(Object, java.lang.Class)" is null
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:190)
+		... 2 more
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

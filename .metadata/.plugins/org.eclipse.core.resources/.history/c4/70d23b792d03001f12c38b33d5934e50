@@ -1,0 +1,22 @@
+package com.TaskDemo.Repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.TaskDemo.Entity.Task;
+
+@Repository
+public class TaskRepository {
+
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	
+	public Task findById(Long id) {
+		
+		String sql = "SELECT * FROM tasks WHERE id = ?";
+		
+		return null;		
+	}
+}

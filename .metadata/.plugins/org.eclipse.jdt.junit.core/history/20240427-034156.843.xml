@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskApiTests" project="Task" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskApiTests" time="1.552" displayname="TaskApiTests" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskApiTests]">
+    <testcase name="textCreateNewTaskAPI" classname="com.TaskDemo.Task.TaskApiTests" time="1.552" displayname="textCreateNewTaskAPI()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskApiTests]/[method:textCreateNewTaskAPI()]"/>
+  </testsuite>
+</testrun>
