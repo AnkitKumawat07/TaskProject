@@ -24,12 +24,18 @@ public class TaskRepository {
 	private JdbcTemplate jdbcTemplate;
 	
 	
+	
+	
+	public TaskRepository(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
 	public Task findById(Long id) {
 		String sql = "SELECT * FROM tasks WHERE id = ?";
 		RowMapper<Task> mapper = new RowMapperImpl();
 		Task currTask;
 		try {
-			currTask = jdbcTemplate.queryForObject(sql, mapper,id);	
+			currTask = this.jdbcTemplate.queryForObject(sql, mapper,id);	
 		}catch(Exception ex) {
 			return null;
 		}
@@ -38,14 +44,14 @@ public class TaskRepository {
 	
 	public List<Task> findAllTasks(){
 		String sql= "SELECT * FROM tasks";
-		List<Task> totalTasks = jdbcTemplate.query(sql, new RowMapperImpl());
+		List<Task> totalTasks = this.jdbcTemplate.query(sql, new RowMapperImpl());
 		return totalTasks;
 	}
 	
 	public Long save(Task task) {
 		String sql = "INSERT INTO tasks(taskName, taskDescription, taskStatus, dateSubmit, priority) VALUES (?, ?, ?, ?, ?)";
 		KeyHolder keyHolder = new GeneratedKeyHolder();
-		jdbcTemplate.update(new PreparedStatementCreator() {
+		this.jdbcTemplate.update(new PreparedStatementCreator() {
 	        @Override
 	        public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
 	            // Create a PreparedStatement with the SQL query and specify the generated key column names
@@ -77,13 +83,13 @@ public class TaskRepository {
     }
 
     public boolean update(Task task) {
-       int rowsUpdate =  jdbcTemplate.update("UPDATE tasks SET taskName=?, taskDescription=?, taskStatus=?, dateSubmit=?, priority=? WHERE id=?",
+       int rowsUpdate =  this.jdbcTemplate.update("UPDATE tasks SET taskName=?, taskDescription=?, taskStatus=?, dateSubmit=?, priority=? WHERE id=?",
                 task.getTaskName(), task.getTaskDescription(), task.getStatus(), task.getDateSubmit(), task.getPriority(), task.getId());
        return rowsUpdate>0;
     }
 
     public boolean deleteById(Long id) {
-        int rowsUpdate =  jdbcTemplate.update("DELETE FROM tasks WHERE id=?", id);
+        int rowsUpdate =  this.jdbcTemplate.update("DELETE FROM tasks WHERE id=?", id);
         return rowsUpdate > 0;
     }
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskControllerApiTest" project="Task" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskControllerApiTest" time="0.653" displayname="TaskControllerApiTest" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]">
+    <testcase name="getTaskById_notFound" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.309" displayname="getTaskById_notFound()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_notFound()]"/>
+    <testcase name="getAllTaskTest_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.149" displayname="getAllTaskTest_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getAllTaskTest_success()]"/>
+    <testcase name="getTaskById_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.047" displayname="getTaskById_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_success()]"/>
+    <testcase name="createNewTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.117" displayname="createNewTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:createNewTask_success()]"/>
+  </testsuite>
+</testrun>

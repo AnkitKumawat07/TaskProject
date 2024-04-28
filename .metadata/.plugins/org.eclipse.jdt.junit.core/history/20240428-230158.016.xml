@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskControllerApiTest" project="Task" tests="4" started="4" failures="1" errors="0" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskControllerApiTest" time="0.552" displayname="TaskControllerApiTest" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]">
+    <testcase name="getTaskById_notFound" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.296" displayname="getTaskById_notFound()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_notFound()]"/>
+    <testcase name="getAllTaskTest_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.103" displayname="getAllTaskTest_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getAllTaskTest_success()]"/>
+    <testcase name="getTaskById_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.038" displayname="getTaskById_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_success()]"/>
+    <testcase name="createNewTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.101" displayname="createNewTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:createNewTask_success()]">
+      <failure>java.lang.AssertionError: Status expected:&lt;200&gt; but was:&lt;201&gt;
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.TaskDemo.Task.TaskControllerApiTest.createNewTask_success(TaskControllerApiTest.java:137)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

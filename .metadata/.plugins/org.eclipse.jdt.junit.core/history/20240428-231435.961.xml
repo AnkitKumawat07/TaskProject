@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskControllerApiTest" project="Task" tests="5" started="5" failures="0" errors="1" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskControllerApiTest" time="0.664" displayname="TaskControllerApiTest" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]">
+    <testcase name="updateTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.141" displayname="updateTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:updateTask_success()]">
+      <error>org.mockito.exceptions.misusing.InvalidUseOfMatchersException: 
+Invalid use of argument matchers!
+2 matchers expected, 1 recorded:
+-&gt; at com.TaskDemo.Task.TaskControllerApiTest.updateTask_success(TaskControllerApiTest.java:147)
+
+This exception may occur if matchers are combined with raw values:
+    //incorrect:
+    someMethod(any(), "raw String");
+When using matchers, all arguments have to be provided by matchers.
+For example:
+    //correct:
+    someMethod(any(), eq("String by matcher"));
+
+For more info see javadoc for Matchers class.
+
+	at com.TaskDemo.Task.TaskControllerApiTest.updateTask_success(TaskControllerApiTest.java:147)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="getTaskById_notFound" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.195" displayname="getTaskById_notFound()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_notFound()]"/>
+    <testcase name="getAllTaskTest_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.115" displayname="getAllTaskTest_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getAllTaskTest_success()]"/>
+    <testcase name="getTaskById_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.057" displayname="getTaskById_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_success()]"/>
+    <testcase name="createNewTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.119" displayname="createNewTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:createNewTask_success()]"/>
+  </testsuite>
+</testrun>

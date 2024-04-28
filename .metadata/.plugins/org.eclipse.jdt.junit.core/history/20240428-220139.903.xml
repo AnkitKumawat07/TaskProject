@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskControllerApiTest" project="Task" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskControllerApiTest" time="0.392" displayname="TaskControllerApiTest" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]">
+    <testcase name="getAllTaskTest_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.34" displayname="getAllTaskTest_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getAllTaskTest_success()]"/>
+    <testcase name="getTaskById_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.047" displayname="getTaskById_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_success()]"/>
+  </testsuite>
+</testrun>

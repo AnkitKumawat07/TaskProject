@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskControllerApiTest" project="Task" tests="5" started="5" failures="0" errors="1" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskControllerApiTest" time="0.679" displayname="TaskControllerApiTest" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]">
+    <testcase name="updateTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.423" displayname="updateTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:updateTask_success()]">
+      <error>org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean &amp; maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -&gt; at com.TaskDemo.Task.TaskControllerApiTest.updateTask_success(TaskControllerApiTest.java:146)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="getTaskById_notFound" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.042" displayname="getTaskById_notFound()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_notFound()]"/>
+    <testcase name="getAllTaskTest_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.097" displayname="getAllTaskTest_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getAllTaskTest_success()]"/>
+    <testcase name="getTaskById_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.039" displayname="getTaskById_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_success()]"/>
+    <testcase name="createNewTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.046" displayname="createNewTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:createNewTask_success()]"/>
+  </testsuite>
+</testrun>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskRepositoryTests" project="Task" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.TaskDemo.Task.TaskRepositoryTests" time="1.765" displayname="TaskRepositoryTests" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]">
-    <testcase name="testCreateUser" classname="com.TaskDemo.Task.TaskRepositoryTests" time="1.765" displayname="testCreateUser()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testCreateUser()]"/>
-  </testsuite>
-</testrun>

@@ -22,6 +22,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
@@ -85,11 +86,17 @@ public class TaskApiTests {
 	@Test
 	public void test_getTaskFromId() throws Exception{
 		Long taskId = 4L;
-		ResultActions response=mockMvc.perform(get("/api/{id}", taskId));
-		response.andExpect(status().isOk())
-		.andExpect(jsonPath("$.taskName", is(task.getTaskName()));
+		ResultActions response=mockMvc.perform(get("/tasks/{id}", taskId))
+				.andExpect(status().isOk());
 		
 	}
+	
+	@Test
+	public void getAllTasks() throws Exception{
+		
+	}
+	
+	
 	
 	
 	

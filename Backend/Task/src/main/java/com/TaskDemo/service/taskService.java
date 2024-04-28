@@ -9,7 +9,7 @@ import com.TaskDemo.Entity.Task;
 
 public interface taskService {
 
-	public void createTask(Task task);
+	public Long createTask(Task task);
 	
 	public boolean updateTask(Long id, Task task);
 	

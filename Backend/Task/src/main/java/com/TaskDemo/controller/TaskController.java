@@ -31,6 +31,14 @@ public class TaskController {
 	@Autowired
 	private taskService taskservice;
 	
+	
+
+
+	public TaskController(taskService taskservice) {
+		this.taskservice = taskservice;
+	}
+
+
 	@Operation(tags = "Get all Task", description = "Get all task present")
 	@GetMapping
     public List<Task> getAllTasks() {
@@ -54,12 +62,12 @@ public class TaskController {
 
 	@Operation(tags = "Create Task", description = "Create New Task")
     @PostMapping
-    public ResponseEntity<Void> createTask(@RequestBody Task task) {
+    public ResponseEntity<Long> createTask(@RequestBody Task task) {
     	if(task==null || task.getTaskName()==null || task.getTaskDescription()==null || task.getPriority()==null) {
     		return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     	}
 		task.setDateSubmit(new Date());
-		taskservice.createTask(task);
+		Long id = taskservice.createTask(task);
 		if(task.getId()!=null) {
 			return new ResponseEntity<>(HttpStatus.CREATED);
 		}

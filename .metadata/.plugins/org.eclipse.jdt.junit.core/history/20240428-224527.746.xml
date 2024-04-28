@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskControllerApiTest" project="Task" tests="5" started="5" failures="0" errors="5" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskControllerApiTest" time="0.015" displayname="TaskControllerApiTest" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]">
+    <testcase name="updateTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.003" displayname="updateTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:updateTask_success()]">
+      <error>java.lang.ClassCastException: class com.fasterxml.jackson.databind.ObjectWriter cannot be cast to class ch.qos.logback.core.net.ObjectWriter (com.fasterxml.jackson.databind.ObjectWriter and ch.qos.logback.core.net.ObjectWriter are in unnamed module of loader 'app')
+	at com.TaskDemo.Task.TaskControllerApiTest.&lt;init&gt;(TaskControllerApiTest.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="getTaskById_notFound" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.002" displayname="getTaskById_notFound()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_notFound()]">
+      <error>java.lang.ClassCastException: class com.fasterxml.jackson.databind.ObjectWriter cannot be cast to class ch.qos.logback.core.net.ObjectWriter (com.fasterxml.jackson.databind.ObjectWriter and ch.qos.logback.core.net.ObjectWriter are in unnamed module of loader 'app')
+	at com.TaskDemo.Task.TaskControllerApiTest.&lt;init&gt;(TaskControllerApiTest.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="getAllTaskTest_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.003" displayname="getAllTaskTest_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getAllTaskTest_success()]">
+      <error>java.lang.ClassCastException: class com.fasterxml.jackson.databind.ObjectWriter cannot be cast to class ch.qos.logback.core.net.ObjectWriter (com.fasterxml.jackson.databind.ObjectWriter and ch.qos.logback.core.net.ObjectWriter are in unnamed module of loader 'app')
+	at com.TaskDemo.Task.TaskControllerApiTest.&lt;init&gt;(TaskControllerApiTest.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="getTaskById_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.002" displayname="getTaskById_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:getTaskById_success()]">
+      <error>java.lang.ClassCastException: class com.fasterxml.jackson.databind.ObjectWriter cannot be cast to class ch.qos.logback.core.net.ObjectWriter (com.fasterxml.jackson.databind.ObjectWriter and ch.qos.logback.core.net.ObjectWriter are in unnamed module of loader 'app')
+	at com.TaskDemo.Task.TaskControllerApiTest.&lt;init&gt;(TaskControllerApiTest.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+    <testcase name="createNewTask_success" classname="com.TaskDemo.Task.TaskControllerApiTest" time="0.001" displayname="createNewTask_success()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskControllerApiTest]/[method:createNewTask_success()]">
+      <error>java.lang.ClassCastException: class com.fasterxml.jackson.databind.ObjectWriter cannot be cast to class ch.qos.logback.core.net.ObjectWriter (com.fasterxml.jackson.databind.ObjectWriter and ch.qos.logback.core.net.ObjectWriter are in unnamed module of loader 'app')
+	at com.TaskDemo.Task.TaskControllerApiTest.&lt;init&gt;(TaskControllerApiTest.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

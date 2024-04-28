@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskRepositoryTests" project="Task" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.TaskDemo.Task.TaskRepositoryTests" time="2.119" displayname="TaskRepositoryTests" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]">
+    <testcase name="testUpdateTask" classname="com.TaskDemo.Task.TaskRepositoryTests" time="2.058" displayname="testUpdateTask()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testUpdateTask()]"/>
+    <testcase name="testDeleteTaskById" classname="com.TaskDemo.Task.TaskRepositoryTests" time="0.022" displayname="testDeleteTaskById()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testDeleteTaskById()]"/>
+    <testcase name="testCreateTask" classname="com.TaskDemo.Task.TaskRepositoryTests" time="0.017" displayname="testCreateTask()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testCreateTask()]"/>
+    <testcase name="testFindTaskById" classname="com.TaskDemo.Task.TaskRepositoryTests" time="0.015" displayname="testFindTaskById()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testFindTaskById()]"/>
+  </testsuite>
+</testrun>

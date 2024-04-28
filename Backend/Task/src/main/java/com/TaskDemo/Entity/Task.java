@@ -2,6 +2,9 @@ package com.TaskDemo.Entity;
 
 import java.util.Date;
 
+import lombok.Builder;
+
+@Builder
 public class Task {
 
 	private Long id;

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TaskRepositoryTests" project="Task" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.TaskDemo.Task.TaskRepositoryTests" time="1.817" displayname="TaskRepositoryTests" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]">
-    <testcase name="testDeleteTaskById" classname="com.TaskDemo.Task.TaskRepositoryTests" time="1.767" displayname="testDeleteTaskById()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testDeleteTaskById()]"/>
-    <testcase name="testCreateTask" classname="com.TaskDemo.Task.TaskRepositoryTests" time="0.019" displayname="testCreateTask()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testCreateTask()]"/>
-    <testcase name="testFindTaskById" classname="com.TaskDemo.Task.TaskRepositoryTests" time="0.026" displayname="testFindTaskById()" uniqueid="[engine:junit-jupiter]/[class:com.TaskDemo.Task.TaskRepositoryTests]/[method:testFindTaskById()]"/>
-  </testsuite>
-</testrun>
